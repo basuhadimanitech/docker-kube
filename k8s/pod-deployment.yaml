@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment-pod
+  labels:
+    app: node
+spec:
+  template:
+    metadata:
+      name: my-pod
+      labels:
+        app: node
+    spec:
+      containers:
+        - name: myfirst-container
+          image: basuhadimani94/create-react-docker-image
+  replicas: 3
+  selector:
+    matchLabels:
+      app: node

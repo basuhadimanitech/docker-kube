@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  labels:
+    app: node
+spec:
+  containers:
+    - name: myfirst-container
+      image: basuhadimani94/create-react-docker-image
+      ports:
+        - containerPort: 3000
